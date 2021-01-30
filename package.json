@@ -1,0 +1,29 @@
+{
+  "name": "lakeview-coffee-shops",
+  "version": "1.0.0",
+  "description": "app to locate local coffee shops and rate them",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganmatthews44/lakeview-coffee-shops.git"
+  },
+  "author": "Megan Matthews",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/meganmatthews44/lakeview-coffee-shops/issues"
+  },
+  "homepage": "https://github.com/meganmatthews44/lakeview-coffee-shops#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "method-override": "^3.0.0",
+    "mongoose": "^5.11.14",
+    "passport": "^0.4.1",
+    "passport-google-oauth": "^2.0.0"
+  }
+}
