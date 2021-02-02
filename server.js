@@ -20,6 +20,8 @@ require('./config/passport');
 // require routes
 
 const indexRoutes = require('./routes/index');
+const userRoutes = require('./routes/user');
+const shopsRoutes = require('./routes/shops');
 
 
 // view engine set up
@@ -44,6 +46,8 @@ app.use(passport.session());
 // use routes
 
 app.use('/', indexRoutes);
+app.use('/user', userRoutes);
+app.use('/shops', shopsRoutes);
 
 // set port
 app.listen(PORT, () => {

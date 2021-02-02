@@ -1,0 +1,28 @@
+<%- include('../partials/header') %>
+<h1>Coffee Shops Index</h1>
+<a href="/shops/new">Add New Shop</a>
+    
+    
+    <br></br>
+    <table>
+        <thead>
+            <th>Shop</th>
+            <th>Website</th>
+            <th>Picture URL</th>
+        </thead>
+        <tbody>
+            <% shops.forEach(shop => { %>
+                <tr>
+                    <td><%= shop.name %></td>
+                    <td><%= shop.websiteUrl %></td>
+                    <td><%= shop.picture %></td>
+                    <td><a href="shops/<%= shop._id %>">DETAILS</a></td>
+                    <td><form action="/shops/<%= shop._id %>?_method=DELETE" class="delete-form" method="POST">
+                        <button type="submit" class="btn">Delete</button>
+                    </form>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+    </table>
+    <%- include('../partials/footer') %>
