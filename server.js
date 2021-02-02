@@ -12,12 +12,15 @@ require('dotenv').config();
 const app = express();
 
 // connect to database
+// Connect to DB with Mongoose
+require('./config/database');
+
+require('./config/passport');
 
 // require routes
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-})
+const indexRoutes = require('./routes/index');
+
 
 // view engine set up
 app.set('view engine', 'ejs');
@@ -39,6 +42,8 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 // use routes
+
+app.use('/', indexRoutes);
 
 // set port
 app.listen(PORT, () => {
