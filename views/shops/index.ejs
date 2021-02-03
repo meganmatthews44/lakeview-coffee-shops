@@ -1,8 +1,8 @@
 <%- include('../partials/header') %>
 <h1>Coffee Shops Index</h1>
-<a href="/shops/new">Add New Shop</a>
+
     
-    
+    <div>
     <br></br>
     <table>
         <thead>
@@ -25,4 +25,9 @@
             <% }) %>
         </tbody>
     </table>
+    <div id="new-shop">
+        <p>Don't see a Lakeview Coffee Shop you love?</p>
+        <a href="/shops/new" class="button">Add it here!</a>
+    </div>
+</div>
     <%- include('../partials/footer') %>
