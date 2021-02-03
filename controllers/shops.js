@@ -2,7 +2,7 @@ const User = require('../models/User');
 const Shop = require('../models/Shop');
 const Post = require('../models/Post');
 
-function index(req, res) {
+function shopIndex(req, res) {
     Shop.find({}, function(err, shops){
         res.render('shops/index', {
             shops,
@@ -18,6 +18,6 @@ function newShop (req, res) {
 }
 
 module.exports = {
-    index,
+    shopIndex,
     newShop
 }

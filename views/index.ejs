@@ -1,11 +1,15 @@
 <%- include('./partials/header') %>
 <main>
-    <% if (user) { %>
-        <a href="/shops" >See All Coffee Shop</a>
-        <a href="/shops/new" >Add Coffee Shop</a>
+
+  <div id="showcase">
+      <h1>Welcome to Chicago Lakeview Coffee</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aut nihil, voluptates incidunt laborum!</p>
+      <% if (user) { %>
+        <a href="/shops" class="button">See All Coffee Shops</a>
         <% } else { %>
-          
+          <a href="/auth/google" class="button">Login to Explore</a>
           <% } %>
+  </div>  
 
 
 </main>

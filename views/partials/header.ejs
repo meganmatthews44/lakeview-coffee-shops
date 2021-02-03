@@ -13,6 +13,10 @@
   <!-- Materialize CSS Framework -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
   <link rel="stylesheet" href="/css/style.css" />
+  <!-- CSS only -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+  <!-- JavaScript Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
   <!-- JavaScript for Materialize -->
   <script defer src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </head>
@@ -20,10 +24,12 @@
 <body>
   <div class="navbar-fixed">
     <nav>
-      <div class="nav-wrapper blue">
-        <a href="" class="brand-logo left">Lakeview Coffee Shops</a>
+      <div class="nav-wrapper black">
+        <a href="/" class="brand-logo left">Chicago Lakeview Coffee</a>
         <ul class="right">
-          <li><a href="/">Home</a></li>
+          <% if (user) { %>
+          <li><a href="/user"><%= user.name %>'s Profile</a></li>
+          <% } %>
           <!-- Place Login UI Here -->
           <li>
             <% if (user) { %>
