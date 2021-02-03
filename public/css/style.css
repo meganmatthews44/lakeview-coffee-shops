@@ -81,3 +81,50 @@ body {
     background: black;
     color: white;
 }
+
+
+#add-shop {
+    background-image: url('/images/coffee_shop.jpg');
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+#add-shop h1 {
+    text-align: center;
+    margin-top: 10px;
+    color: black;
+}
+
+.new-form {
+    margin-left: 5vh;
+    margin-right: 5vh;
+    color: black;
+}
+
+#new-shop-form {
+    background: white;
+    margin-left: 5vh;
+    margin-right: 5vh;
+    color: black;
+    padding: 10px;
+    border:  black 2px solid;
+}
+
+#new-shop-form .button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+}
+
+
+
+
