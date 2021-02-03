@@ -3,7 +3,8 @@ const mongoose = require('mongoose');
 const shopSchema = new mongoose.Schema ({
     name: {
         type: String,
-        required: true
+        required: true,
+        unique: true,
     },
     picture: {
         type: String,
@@ -16,10 +17,6 @@ const shopSchema = new mongoose.Schema ({
         type: mongoose.Types.ObjectId,
         ref: 'Post'
     },
-    user: {
-        type: mongoose.Types.ObjectId,
-        ref: 'User'
-    }
   }, {
     timestamps: true
   });

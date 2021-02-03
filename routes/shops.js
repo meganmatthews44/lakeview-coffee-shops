@@ -5,4 +5,6 @@ router.get('/', shopCtrl.shopIndex);
 
 router.get('/new', shopCtrl.newShop);
 
+router.post('/', shopCtrl.addShop);
+
 module.exports = router;

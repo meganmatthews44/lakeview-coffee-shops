@@ -17,7 +17,18 @@ function newShop (req, res) {
     });
 }
 
+function addShop (req, res) {
+    const shop = new Shop(req.body);
+
+    shop.save(function(err) {
+        if (err) return res.render('shops/new');
+        console.log(shop);
+        res.redirect('/shops');
+    })
+}
+
 module.exports = {
     shopIndex,
-    newShop
+    newShop,
+    addShop
 }
