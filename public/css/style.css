@@ -126,5 +126,7 @@ body {
 }
 
 
-
+.shop-image {
+    max-height: 200vh;
+}
 

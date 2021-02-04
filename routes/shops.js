@@ -7,4 +7,6 @@ router.get('/new', shopCtrl.newShop);
 
 router.post('/', shopCtrl.addShop);
 
+router.get('/:id', shopCtrl.show);
+
 module.exports = router;

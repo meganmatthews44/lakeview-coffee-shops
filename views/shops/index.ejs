@@ -4,27 +4,26 @@
     
     <div>
     <br></br>
-    <table>
-        <thead>
-            <th>Shop</th>
-            <th>Website</th>
-            <th>Picture URL</th>
-        </thead>
-        <tbody>
+    
             <% shops.forEach(shop => { %>
-                <tr>
-                    <td><%= shop.name %></td>
-                    <td><%= shop.websiteUrl %></td>
-                    <td><%= shop.picture %></td>
-                    <td><a href="shops/<%= shop._id %>">DETAILS</a></td>
-                    <td><form action="/shops/<%= shop._id %>?_method=DELETE" class="delete-form" method="POST">
+                <div class="row">
+                    <div class ="card">
+                
+                    <h2><%= shop.name %></h2>
+                    <div class="shop-image"></div>
+                        <img src="<%= shop.picture %>" alt="" style="height:300px; width:300x;">
+                    </div>
+                    <p><a href="<%= shop.websiteUrl%>">Website</a></p>
+                    <a href="shops/<%= shop._id %>">DETAILS</a>
+                    <form action="/shops/<%= shop._id %>?_method=DELETE" class="delete-form" method="POST">
                         <button type="submit" class="btn">Delete</button>
                     </form>
-                    </td>
-                </tr>
+                    
+                
             <% }) %>
-        </tbody>
-    </table>
+            </div>
+        </div>
+        
     <div id="new-shop">
         <p>Don't see a Lakeview Coffee Shop you love?</p>
         <a href="/shops/new" class="button">Add it here!</a>

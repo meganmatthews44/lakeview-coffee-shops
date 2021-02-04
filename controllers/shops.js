@@ -24,15 +24,25 @@ function addShop (req, res) {
         console.log(createdShop)
         res.redirect('/shops');
     })
-    /* shop.save(function(err) {
-        if (err) return res.render('shops/new');
-        console.log(shop);
-        res.redirect('/shops');
-    }) */
+};
+
+function show (req, res) {
+    Shop.findById(req.params.id)
+    .populate('details').exec(function(err, shop) {
+        
+
+        const context = {
+            shop
+        }
+        
+        res.render('shops/show', context);
+
+    })
 };
 
 module.exports = {
     shopIndex,
     newShop,
-    addShop
+    addShop,
+    show
 };
