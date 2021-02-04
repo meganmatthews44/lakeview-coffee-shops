@@ -1,3 +1,13 @@
 <%- include('../partials/header') %>
-<h1>Shop Page by ID</h1>
+<a href="/shops" >See All Shops</a>
+<h1><%=shop.name%></h1>
+ <section id="show-page">
+    <div><a href="<%= shop.websiteUrl %>">Website</a></div>
+    <br>
+    <div>Average Rating: </div>
+    <div><%= shop.averageRating %></div>
+    <br>
+    <div>Posts: </div>
+    <div><%= shop.posts %></div>
+    <br>
 <%- include('../partials/footer') %>

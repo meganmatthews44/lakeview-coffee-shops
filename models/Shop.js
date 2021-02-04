@@ -13,6 +13,9 @@ const shopSchema = new mongoose.Schema ({
     websiteUrl: {
         type: String,
     },
+    averageRating: {
+        type: Number,
+    },
     posts: {
         type: mongoose.Types.ObjectId,
         ref: 'Post'
