@@ -46,5 +46,32 @@
         </form>
 
         </div>
+
+        <div>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th>User</th>
+                    <th>Review:</th>
+                    <th>Rating:</th>
+                    <th>Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <% posts.forEach(function(post) { %>
+                  <tr>
+                    <td><%= user.name %> </td>  
+                    <td><%= post.caption %></td>
+                    <td><%= post.rating %></td>
+                    <td>
+                      <form action="/<%= shop._id %>/reviews<%= post._id %>?_method=DELETE" method="POST">
+                        <button class="delete-button" type="submit">Delete</button>
+                      </form>
+                    </td>
+                  </tr>
+                  <% }) %>
+                </tbody>
+            </table>
+        </div>
         <br>
         <%- include('../partials/footer') %>

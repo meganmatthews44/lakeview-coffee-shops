@@ -28,13 +28,16 @@ function addShop (req, res) {
 
 function show (req, res) {
     Shop.findById(req.params.id)
-    .populate('user').exec(function(err, shop) {
-        
+    .populate('details').exec(function(err, shop) {
+        Post.find({shop: shop._id}, function(err, posts) {
 
         const context = {
-            shop
+            shop,
+            posts
         }
+
         res.render('shops/show', context);
+    })
 
     })
 };
@@ -43,5 +46,5 @@ module.exports = {
     shopIndex,
     newShop,
     addShop,
-    show
+    show, 
 };
