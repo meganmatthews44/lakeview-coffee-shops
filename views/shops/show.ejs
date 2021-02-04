@@ -1,13 +1,50 @@
 <%- include('../partials/header') %>
-<a href="/shops" >See All Shops</a>
-<h1><%=shop.name%></h1>
- <section id="show-page">
-    <div><a href="<%= shop.websiteUrl %>">Website</a></div>
-    <br>
-    <div>Average Rating: </div>
-    <div><%= shop.averageRating %></div>
-    <br>
-    <div>Posts: </div>
-    <div><%= shop.posts %></div>
-    <br>
-<%- include('../partials/footer') %>
+    <a href="/shops">Back To All Shops</a>
+    <h1>
+        <%=shop.name%>
+    </h1>
+    <section id="show-page">
+        <div><a href="<%= shop.websiteUrl %>">Website</a></div>
+        <br>
+        <div>Average Rating: </div>
+        <div>
+            <%= shop.averageRating %>
+        </div>
+        <br>
+        <div>
+            <h3>Reviews</h3>
+
+        </div>
+        <div>
+            <%= shop.posts %>
+        </div>
+
+        <div>
+            <h4>Add New Rewiew</h4>
+            <div class="row"></div>
+            <form id="add-review-form" class="col s12" method="POST" action="/shops/<%= shop._id %>/reviews">
+                <div class="row">
+                    <div class="input-field col s12">
+                        <textarea id="textarea1" class="materialize-textarea" name="caption"></textarea>
+                        <label for="textarea1">Textarea</label>
+                    </div>
+                </div>
+        </div>
+        <select class="browser-default" name="rating">
+            <option value="" disabled selected>Choose your Rating</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+        </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Add Review">
+        </div>
+        </form>
+
+        </div>
+        <br>
+        <%- include('../partials/footer') %>

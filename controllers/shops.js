@@ -28,13 +28,12 @@ function addShop (req, res) {
 
 function show (req, res) {
     Shop.findById(req.params.id)
-    .populate('details').exec(function(err, shop) {
+    .populate('user').exec(function(err, shop) {
         
 
         const context = {
             shop
         }
-        
         res.render('shops/show', context);
 
     })
