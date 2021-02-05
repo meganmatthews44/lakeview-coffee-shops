@@ -22,9 +22,9 @@ function createPost (req, res) {
           userName: req.user.name
         });
 
-        console.log(newPost);
-        newPost.save();
         
+        newPost.save();
+        console.log(req.user._id);
         res.redirect(`/shops/${shop._id}`);
         console.log(posts, "posts from submit")
       });

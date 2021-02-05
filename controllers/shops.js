@@ -33,7 +33,7 @@ function show (req, res) {
 
         const context = {
             shop,
-            posts
+            posts,
         }
 
         res.render('shops/show', context);

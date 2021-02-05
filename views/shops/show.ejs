@@ -64,9 +64,11 @@
                     <td><%= post.caption %></td>
                     <td><%= post.rating %></td>
                     <td>
+                      <% if (post.user.equals(user && user._id)) { %>
                       <form action="/shops/<%= shop._id %>/reviews/<%= post._id %>?_method=DELETE" method="POST">
                         <button class="delete-button" type="submit">Delete</button>
                       </form>
+                      <% } %>
                     </td>
                   </tr>
                   <% }) %>
