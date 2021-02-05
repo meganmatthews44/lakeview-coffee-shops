@@ -64,7 +64,7 @@
                     <td><%= post.caption %></td>
                     <td><%= post.rating %></td>
                     <td>
-                      <form action="/<%= shop._id %>/reviews<%= post._id %>?_method=DELETE" method="POST">
+                      <form action="/shops/<%= shop._id %>/reviews/<%= post._id %>?_method=DELETE" method="POST">
                         <button class="delete-button" type="submit">Delete</button>
                       </form>
                     </td>

@@ -1,6 +1,7 @@
 const User = require('../models/User');
 const Shop = require('../models/Shop');
 const Post = require('../models/Post');
+const { populate } = require('../models/User');
 
 
 
@@ -30,6 +31,16 @@ function createPost (req, res) {
     });
 };
 
+function deletePost (req, res) {
+  const id = req.params.id
+  Post.findByIdAndDelete(id, function(err, post){
+    const shopId = post.shop
+    if(err) console.log(err)
+    res.redirect(`/shops/${shopId}`)
+  })
+};
+
 module.exports = {
-    createPost
+    createPost,
+    deletePost
 }

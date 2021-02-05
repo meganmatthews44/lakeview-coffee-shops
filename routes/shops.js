@@ -12,4 +12,6 @@ router.get('/:id', shopCtrl.show);
 
 router.post('/:id/reviews', postCtrl.createPost);
 
+router.delete('/:id/reviews/:id', postCtrl.deletePost);
+
 module.exports = router;
