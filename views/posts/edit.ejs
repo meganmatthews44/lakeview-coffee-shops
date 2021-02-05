@@ -1,0 +1,32 @@
+<%- include('../partials/header') %>
+<form method="POST" action="/shops/<%= shop._id %>/reviews/<%= post._id %>/save?_method=PUT">
+    <!--<fieldset> -->
+      <legend>Edit Review</legend>
+     
+      <p>
+        <label for="review-title">Review</label><br>
+        <input id="review-title" type="text" name="caption" value="<%= post.caption %>"/>
+      </p>
+  
+      
+      <p>
+        <label for="rating-edit">Rating</label><br>
+      </p>
+      <div>
+        <select class="browser-default" type="text" name="rating" value="<%= post.rating %>">
+            <option value="" disabled selected>Edit your Rating</option>
+            <option value="1">1 &#9733;</option>
+            <option value="2">2 &#9733; &#9733;</option>
+            <option value="3">3 &#9733; &#9733; &#9733;</option>
+            <option value="4">4 &#9733; &#9733; &#9733; &#9733;</option>
+            <option value="5">5 &#9733; &#9733; &#9733; &#9733; &#9733;</option>
+        </select>
+    </div>
+      
+   <!--</fieldset>--> 
+    <!-- BUTTON -->
+    <p>
+      <button type="submit">Save Review</button>
+    </p>
+  </form>
+  <%- include('../partials/footer') %>

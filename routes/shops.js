@@ -14,4 +14,8 @@ router.post('/:id/reviews', postCtrl.createPost);
 
 router.delete('/:id/reviews/:id', postCtrl.deletePost);
 
+router.put('/:id/reviews/:id/edit', postCtrl.updatePost);
+
+router.put('/:id/reviews/:id/save', postCtrl.savePost)
+
 module.exports = router;

@@ -12,7 +12,7 @@
         </div>
         <br>
         <div>
-            <h3>Reviews</h3>
+            
 
         </div>
         <div>
@@ -55,7 +55,9 @@
                     <th>Review:</th>
                     <th>Rating:</th>
                     <th></th>
+                    <th></th>
                   </tr>
+                  <h3 id="reviews header">Reviews</h3>
                 </thead>
                 <tbody>
                   <% posts.forEach(function(post) { %>
@@ -63,10 +65,17 @@
                     <td><%= post.userName %> </td>  
                     <td><%= post.caption %></td>
                     <td><%= post.rating %></td>
-                    <td>
+                    <td>  
                       <% if (post.user.equals(user && user._id)) { %>
                       <form action="/shops/<%= shop._id %>/reviews/<%= post._id %>?_method=DELETE" method="POST">
                         <button class="delete-button" type="submit">Delete</button>
+                      </form>
+                      <% } %>
+                    </td>
+                    <td>  
+                      <% if (post.user.equals(user && user._id)) { %>
+                      <form action="/shops/<%= shop._id %>/reviews/<%= post._id %>/edit?_method=PUT" method="POST">
+                        <button class="update-button" type="submit">Edit</button>
                       </form>
                       <% } %>
                     </td>

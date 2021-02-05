@@ -1,7 +1,6 @@
 const User = require('../models/User');
 const Shop = require('../models/Shop');
 const Post = require('../models/Post');
-const { populate } = require('../models/User');
 
 
 
@@ -40,7 +39,33 @@ function deletePost (req, res) {
   })
 };
 
+function updatePost (req, res) {
+  Post.findById(req.params.id, function(err, post) {
+    Shop.findById(req.params.id, function(err, shop){
+
+    
+    const context = {
+      post,
+      shop: post.shop
+    }
+    res.render('posts/edit', context);
+  })
+  })
+};
+
+function savePost (req, res) { 
+  Post.findByIdAndUpdate(req.params.id, function(err){
+    const shopId = post.shop;
+    if (err) console.log(err);
+    
+    res.redirect(`shops/${shopID}`);
+  })
+
+};
+
 module.exports = {
     createPost,
-    deletePost
+    deletePost,
+    updatePost,
+    savePost
 }
