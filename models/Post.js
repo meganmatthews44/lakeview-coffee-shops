@@ -13,6 +13,9 @@ const postSchema = new mongoose.Schema({
     type: mongoose.Types.ObjectId,
     ref: 'User'
   },
+  userName: {
+    type: String
+  },
   rating: {
     type: Number,
     min: 1,

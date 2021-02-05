@@ -17,9 +17,13 @@ function createPost (req, res) {
           caption: req.body.caption,
           rating: req.body.rating,
           shop: shop._id,
+          user: req.user._id,
+          userName: req.user.name
         });
-  
+
+        console.log(newPost);
         newPost.save();
+        
         res.redirect(`/shops/${shop._id}`);
         console.log(posts, "posts from submit")
       });
