@@ -1,11 +1,14 @@
 <%- include('../partials/header') %>
 <main>
+  <section class="user-page"></section>
     <div>
     <% if (user) { %>
-      <h1><%= user.name %> </h1>
-      <h1><%= user.email %> </h1>
+      <h1> Account Details</h1>
       <img src="<%= user.avatarURL %>" alt="profile pic">
+      <p>Name: <%= user.name %> </p>
+      <p>Email: <%= user.email %> </p>
     <% } %>
     </div>
     </main>
+  </section>
 <%- include('../partials/footer') %>
