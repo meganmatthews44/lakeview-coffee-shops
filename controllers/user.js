@@ -8,6 +8,11 @@ function showProfile(req, res) {
     })
 };
 
+function editPicture(req, res) {
+    res.render('user/picture');
+}
+
 module.exports = {
-    showProfile
+    showProfile,
+    editPicture
 }
