@@ -14,6 +14,26 @@ When I am logged in as a user, I can browse local coffee shops that are in my lo
 
 As a user, if there is a coffee shop that does not currently have a profile page, I can create it by adding the shop's name, picture, and basic information. I can not create a profile page for a coffee shop that already exists in the database.
 
+## APP
+
+# Homepage
+
+![Screenshot](./docs/main_page.png ‘Screenshot’)
+
+# All Shops Page
+
+![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+
+# Shop Page
+
+![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+
+# ERD
+
+![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+
+
+
 ## Trello Project Board
 
 <https://trello.com/b/K1fK3J6A/project-2-coffee-shop-app>
