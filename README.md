@@ -32,4 +32,4 @@ As a user, if there is a coffee shop that does not currently have a profile page
 ## Next Steps
 
 - Update profile page to allow user to update information, add more details about themselves, and create a list of coffee shops they want to visit and shops they have already visited
-- 
+- Add Average Rating section to individual coffee shops page
