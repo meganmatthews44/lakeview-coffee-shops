@@ -54,19 +54,21 @@ function updatePost (req, res) {
 };
 
 function savePost (req, res) { 
-  Post.findByIdAndUpdate(req.params.id, 
-    {
-      $set: {... req.body}, 
-    },
-    {
-      new: true,
-    },
-    (err, updatedPost) => {
-      if (err) return console.log(err)
-      res.redirect(`shops/${shopID}`);
-      console.log('this post was updated', updatedPost)
-    })
-
+  Shop.findById(req.params.shopId, (err, foundShop) => {
+    Post.findByIdAndUpdate(req.params.postId, 
+      {
+        $set: {... req.body}, 
+      },
+      {
+        new: true,
+      },
+      (err, updatedPost) => {
+        if (err) return console.log(err)
+        res.redirect(`/shops/${req.params.shopId}`);
+        console.log(foundShop);
+        console.log('this post was updated', updatedPost)
+      })
+  })
 };
 
 module.exports = {
