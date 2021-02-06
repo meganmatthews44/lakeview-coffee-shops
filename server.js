@@ -3,7 +3,7 @@ const express = require('express');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const passport = require('passport');
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // load the env vars
 require('dotenv').config();
