@@ -64,17 +64,21 @@ body {
 
 #new-shop p {
     font-size: 15px;
-
+    background-color: white;
+    color: black;
+    border: black 2px solid;
+    padding: 5px;
 }
 
 #new-shop .button{
     font-size: 18px;
     text-decoration: none;
-    color: black;
     border: black 2px solid;
     padding: 10px 20px;
     border-radius: 10px;
     margin-top: 10px;
+    background: white;
+    color: black;
 }
 
 #new-shop .button:hover{
@@ -136,7 +140,51 @@ body {
 }
 
 .shop-index {
-    background: tan;
+    background-image: url('/images/coffee_beans.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.shop-index h1 {
+    color:white;
+    font-size: 50px;
+}
+
+.shop-index h3 {
+    color: white;
+    font-size: 20px;
+}
+
+#shop-header {
+    border: black 1px solid;
+    background-color: black;
+    margin-top: 5px;
+    max-width:inherit
+}
+
+.shop-index .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: transparent;
+}
+
+.shop-index h2 {
+    background-color: white;
+    color: black;
+    margin: 5px;
+    border: black 3px solid;
+    padding: 5px;
+}
+
+.shop-index .img {
+    border: black 2px solid;
 }
 
 #reviews header {
