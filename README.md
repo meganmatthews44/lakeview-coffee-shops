@@ -18,19 +18,19 @@ As a user, if there is a coffee shop that does not currently have a profile page
 
 # Homepage
 
-![Screenshot](./docs/main_page.png ‘Screenshot’)
+![Screenshot](https://p-rbfw2z.b2.n0.cdn.getcloudapp.com/items/v1uND576/b4490c11-9ebd-4363-b5e4-7e068b07bb06.png?source=viewer&v=fba969e3ec96e36a6884e8a7da4074f0)
 
 # All Shops Page
 
-![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+![Screenshot](https://p-rbfw2z.b2.n0.cdn.getcloudapp.com/items/Qwu9KvNq/ae08fb00-c32f-4e88-9d28-d392e6f6cd3b.png?source=viewer&v=217a9fce02039acfa2f0ccfa4ca37fbb)
 
 # Shop Page
 
-![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+![Screenshot](https://p-rbfw2z.b2.n0.cdn.getcloudapp.com/items/WnuBGRoA/f71867b1-dc7f-4303-a1d4-f1413d046909.png?source=viewer&v=c7019f315e341fed00ea3aeab2001f99)
 
 # ERD
 
-![Screenshot](./docs/desktop-list.png ‘Screenshot’)
+![Screenshot](https://p-rbfw2z.b2.n0.cdn.getcloudapp.com/items/v1uND5ZB/4074670c-8b6f-4c31-87b8-a74044ed626a.png?source=viewer&v=adff85c123afdda202fe787c76c26c09)
 
 
 
