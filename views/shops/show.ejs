@@ -1,27 +1,22 @@
 <%- include('../partials/header') %>
-  <div class="shop-page" style="background-image: url(<%= shop.picture %>);">
-    <a href="/shops">Back To All Shops</a>
-    <h1>
+  <section class="shop-page" style="background-image: url(<%= shop.picture %>);">
+    <a class="waves-effect waves-light btn-small black lighten-3 container center-align" href="/shops">Back To All Shops</a>
+    <div class="shop-info container">
+    <h1 class="container center-align">
         <%=shop.name%>
     </h1>
     <section id="show-page">
-        <div><a href="<%= shop.websiteUrl %>">Website</a></div>
+        <div><a class="waves-effect waves-light btn-small brown lighten-1 container" href="<%= shop.websiteUrl %>">Website</a></div>
         <br>
-        <div>Average Rating: </div>
+        <div> <h5 class="container center-align">Average Rating: </h5></div>
         <div>
-            <%= shop.averageRating %>
+            <%= average %>
         </div>
         <br>
-        <div>
-            
+      
 
-        </div>
-        <div>
-            <%= shop.posts %>
-        </div>
-
-        <div>
-            <h4>Add New Rewiew</h4>
+        <div id="add-review-section" class="container">
+            <h4 class="container center-align">Add New Review:</h4>
             <div class="row"></div>
             <form id="add-review-form" class="col s12" method="POST" action="/shops/<%= shop._id %>/reviews">
                 <div class="row">
@@ -30,7 +25,7 @@
                         <label for="textarea1">Write Review Here</label>
                     </div>
                 </div>
-        </div>
+        
         <select class="browser-default" name="rating">
             <option value="" disabled selected>Choose your Rating</option>
             <option value="1">1 &#9733;</option>
@@ -39,14 +34,15 @@
             <option value="4">4 &#9733; &#9733; &#9733; &#9733;</option>
             <option value="5">5 &#9733; &#9733; &#9733; &#9733; &#9733;</option>
         </select>
-        </div>
+        
         <br>
-        <div>
-            <input class= "waves-effect waves-light btn-small brown lighten-3" type="submit" value="Add Review">
+        <div class="container center-align">
+            <input class="waves-effect waves-light btn-small brown lighten-1 container" style="width:200px;" type="submit" value="Add Review">
+          </div>
         </div>
         </form>
 
-        </div>
+
 
         <div>
             <table class="table">
@@ -58,7 +54,7 @@
                     <th></th>
                     <th></th>
                   </tr>
-                  <h3 id="reviews header">Reviews</h3>
+                  <h3 class="container center-align"id="reviews header">Reviews</h3>
                 </thead>
                 <tbody>
                   <% posts.forEach(function(post) { %>
@@ -85,6 +81,7 @@
                 </tbody>
             </table>
         </div>
-        <br>
       </div>
+        <br>
+      </section>
         <%- include('../partials/footer') %>

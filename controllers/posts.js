@@ -23,6 +23,8 @@ function createPost (req, res) {
 
         
         newPost.save();
+        shop.averageRating.push(req.body.rating);
+        console.log(shop.averageRating)
         console.log(req.user._id);
         res.redirect(`/shops/${shop._id}`);
         console.log(posts, "posts from submit")
